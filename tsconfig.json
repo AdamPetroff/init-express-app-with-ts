@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    
+    "module": "esNext",
+    // Target latest version of ECMAScript.
+    "target": "esnext",
+    // Search under node_modules for non-relative imports.
+    "moduleResolution": "node",
+    // Process & infer types from .js files.
+    "allowJs": true,
+    // Don't emit; allow Babel to transform files.
+    "noEmit": true,
+    // Enable strictest settings like strictNullChecks & noImplicitAny.
+    "strict": true,
+    // Import non-ES modules as default imports.
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "es2019",
+      "dom"
+    ],
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@sharedTypes/*": [
+        "shared/types/*"
+      ],
+      "@sharedTypes": [
+        "shared/types/"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+      }
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@figma"
+    ],
+  },
+  "include": [
+    "src",
+    "server",
+    "shared",
+    "generated",
+    ".qawolf", "src/pages/views/.tsx"
+  ],
+  "exclude": [
+    "/generated/index.js"
+  ],
+
+}
